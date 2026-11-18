@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frequência mensal | Gestão PROMAJ</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="container-fluid app-header-inner">
+      <a class="app-brand" href="index.html" aria-label="Página inicial">
+        <span class="brand-mark small" aria-hidden="true">P</span>
+        <span>Gestão PROMAJ</span>
+      </a>
+      <div class="header-actions">
+        <span class="header-unit d-none d-md-inline">EMEF Professor...</span>
+        <a class="avatar" href="index.html" aria-label="Sair da conta">AM</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container app-content">
+    <div class="page-heading">
+      <div>
+        <span class="eyebrow">Competência atual</span>
+        <h1>Frequência mensal</h1>
+      </div>
+      <div class="month-control" aria-label="Selecionar competência">
+        <button type="button" aria-label="Mês anterior">‹</button>
+        <strong>Outubro / 2026</strong>
+        <button type="button" aria-label="Próximo mês">›</button>
+      </div>
+    </div>
+
+    <div class="summary-strip" aria-label="Resumo da competência">
+      <div><span>Jovens</span><strong id="total-jovens">4</strong></div>
+      <div><span>Concluídos</span><strong id="total-concluidos">1</strong></div>
+      <div><span>Pendentes</span><strong id="total-pendentes">3</strong></div>
+    </div>
+
+    <div class="student-list" id="student-list">
+      <article class="student-card" data-status="concluido">
+        <div class="student-card-head">
+          <div class="student-avatar">AC</div>
+          <div class="student-info"><h2>Ana Clara Souza</h2><span>Turma 2 · Mat. 1045</span></div>
+          <span class="status-badge status-success">Concluído</span>
+        </div>
+        <div class="hours-grid">
+          <label>Horas teóricas
+            <input type="number" min="0" max="999" value="72" class="form-control horas-teoricas" inputmode="numeric">
+          </label>
+          <label>Horas práticas
+            <input type="number" min="0" max="999" value="48" class="form-control horas-praticas" inputmode="numeric">
+          </label>
+          <label>Faltas justificadas
+            <input type="number" min="0" max="31" value="0" class="form-control faltas" inputmode="numeric">
+          </label>
+          <div class="hours-result"><span>Horas líquidas</span><strong>120h</strong></div>
+        </div>
+      </article>
+
+      <article class="student-card" data-status="pendente">
+        <div class="student-card-head">
+          <div class="student-avatar">BM</div>
+          <div class="student-info"><h2>Bruno Martins Lima</h2><span>Turma 1 · Mat. 1088</span></div>
+          <span class="status-badge status-warning">Pendente</span>
+        </div>
+        <div class="hours-grid">
+          <label>Horas teóricas
+            <input type="number" min="0" max="999" value="" placeholder="0" class="form-control horas-teoricas" inputmode="numeric">
+          </label>
+          <label>Horas práticas
+            <input type="number" min="0" max="999" value="" placeholder="0" class="form-control horas-praticas" inputmode="numeric">
+          </label>
+          <label>Faltas justificadas
+            <input type="number" min="0" max="31" value="0" class="form-control faltas" inputmode="numeric">
+          </label>
+          <div class="hours-result"><span>Horas líquidas</span><strong>—</strong></div>
+        </div>
+      </article>
+
+      <article class="student-card" data-status="pendente">
+        <div class="student-card-head">
+          <div class="student-avatar">CP</div>
+          <div class="student-info"><h2>Carla Pereira Dias</h2><span>Turma 2 · Mat. 1120</span></div>
+          <span class="status-badge status-warning">Pendente</span>
+        </div>
+        <div class="hours-grid">
+          <label>Horas teóricas
+            <input type="number" min="0" max="999" value="" placeholder="0" class="form-control horas-teoricas" inputmode="numeric">
+          </label>
+          <label>Horas práticas
+            <input type="number" min="0" max="999" value="" placeholder="0" class="form-control horas-praticas" inputmode="numeric">
+          </label>
+          <label>Faltas justificadas
+            <input type="number" min="0" max="31" value="0" class="form-control faltas" inputmode="numeric">
+          </label>
+          <div class="hours-result"><span>Horas líquidas</span><strong>—</strong></div>
+        </div>
+      </article>
+
+      <article class="student-card" data-status="pendente">
+        <div class="student-card-head">
+          <div class="student-avatar">DL</div>
+          <div class="student-info"><h2>Daniel Lopes Castro</h2><span>Turma 1 · Mat. 1154</span></div>
+          <span class="status-badge status-warning">Pendente</span>
+        </div>
+        <div class="hours-grid">
+          <label>Horas teóricas
+            <input type="number" min="0" max="999" value="" placeholder="0" class="form-control horas-teoricas" inputmode="numeric">
+          </label>
+          <label>Horas práticas
+            <input type="number" min="0" max="999" value="" placeholder="0" class="form-control horas-praticas" inputmode="numeric">
+          </label>
+          <label>Faltas justificadas
+            <input type="number" min="0" max="31" value="0" class="form-control faltas" inputmode="numeric">
+          </label>
+          <div class="hours-result"><span>Horas líquidas</span><strong>—</strong></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="action-bar">
+      <button type="button" class="btn btn-outline-secondary" id="save-draft">Salvar rascunho</button>
+      <button type="button" class="btn btn-primary" id="submit-frequency">Enviar para conferência</button>
+    </div>
+  </main>
+
+  <div class="toast-region" aria-live="polite" aria-atomic="true" id="toast-region"></div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
